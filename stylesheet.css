@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+@import url("style-fonts.css");
 body {
   padding: 0;
   margin: 0;
@@ -29,11 +29,11 @@ body {
   padding: 2rem;
 
   width: 40vw;
-  height: 60vh;
+  height: fit-content;
 
   background-color: hsl(0, 0%, 100%);
   border-radius: 1rem;
-  border-bottom-right-radius: 20rem;
+  border-bottom-right-radius: 10rem;
 }
 
 /* ---- Input ---- */
@@ -54,6 +54,8 @@ body {
   letter-spacing: 0.3rem;
   margin-bottom: 0.5rem;
   color: hsl(0, 1%, 44%);
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
 }
 
 input {
@@ -63,10 +65,12 @@ input {
   border-radius: 0.5rem;
   border: 0.12rem solid hsl(0, 0%, 86%);
   cursor: pointer;
-  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
 }
 
 input:focus {
+  caret-color: hsl(259, 100%, 65%);
   border-color: hsl(259, 100%, 65%);
   outline: none;
 }
@@ -138,18 +142,21 @@ input[type="number"] {
 .output-element {
   display: flex;
   gap: 0.5rem;
-  font-size: 5rem;
+  font-size: 6rem;
+  margin: -1rem;
+  margin-left: 0;
 }
 
 .output {
   color: hsl(259, 100%, 65%);
+  font-family: "Poppins" sans-serif;
   font-style: italic;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .output-text {
   font-style: italic;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .attribution {
