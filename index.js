@@ -84,7 +84,7 @@ jQuery(document).ready(function ($) {
 
   // Animate te counting up for number output
   function animateValue(obj, start, end, duration) {
-    if (end > 10) start = end - 10;
+    if (end > 50) start = end - 50;
     let startTimestamp = null;
     const step = (timestamp) => {
       if (!startTimestamp) startTimestamp = timestamp;

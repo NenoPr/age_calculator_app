@@ -135,6 +135,12 @@ input[type="number"] {
   background-color: hsl(259, 100%, 65%);
   border-radius: 50%;
   cursor: pointer;
+  transition: transform .5s;
+}
+
+.calculate-action:hover {
+  background-color: hsl(0, 0%, 8%);
+  transform: scale(1.15);
 }
 
 .arrow {
