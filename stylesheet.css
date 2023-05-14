@@ -239,6 +239,14 @@ input[type="number"] {
     width: 4rem;
     height: 4rem;
   }
+  .calculate-action:hover {
+    background-color: hsl(259, 100%, 65%);
+    transform: scale(1);
+  }
+  .calculate-action:active {
+    background-color: hsl(0, 0%, 8%);
+    transform: scale(1.15);
+  }
 }
 
 @media (max-width: 500px) {

@@ -1,6 +1,12 @@
 jQuery.noConflict();
 jQuery(document).ready(function ($) {
   $(".calculate-action").on("click", function () {
+    calculate()
+  });
+  $("input").on("keypress", function (e) {
+    if (e.key === "Enter") calculate()
+  });
+  function calculate() {
     if ($(".calc-action-svg").hasClass("arrow-svg")) {
       // clean error styling css classes
       cleanErrorCss();
@@ -29,7 +35,7 @@ jQuery(document).ready(function ($) {
     // Toggle te svg for calculate button when the arrow svg is present
     $(".calc-action-svg").toggleClass("arrow-svg");
     $(".calc-action-svg").toggleClass("redo-svg");
-  });
+  }
 
   // Change to arrow svg if the user types into input fields
   $(".input-div").on("keydown", function () {
