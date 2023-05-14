@@ -54,6 +54,7 @@ body {
   letter-spacing: 0.3rem;
   margin-bottom: 0.5rem;
   color: hsl(0, 1%, 44%);
+  align-self: flex-start;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
@@ -75,6 +76,15 @@ input:focus {
   outline: none;
 }
 
+.error-date {
+  height: 1rem;
+  width: 90%;
+  margin-right: .2rem;
+  color: rgb(255, 0, 0);
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
 /* ---- Remove arrows on number input ---- */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -86,6 +96,11 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.calc-action-svg {
+  max-width: 50%;
+  transition: transform .5s;
 }
 
 /* ---- Calc Interaction ---- */
@@ -117,7 +132,7 @@ input[type="number"] {
   justify-content: center;
   width: 5rem;
   height: 5rem;
-  background-color: hsl(0, 0%, 8%);
+  background-color: hsl(259, 100%, 65%);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -162,4 +177,87 @@ input[type="number"] {
 .attribution {
   flex: 0;
   margin-bottom: 1rem;
+}
+
+/* ---- Error Classes ---- */
+
+.error-border-color {
+  border-color: red;
+}
+
+.error-text-color {
+  color: red;
+}
+
+@media (max-width: 1279px) {
+  .project-card {
+    width: 60vw;
+  }
+  .output-element {
+    font-size: 5rem;
+  }
+  input {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .project-card {
+    width: 70vw;
+  }
+  .input-container {
+    min-width: 100%;
+  }
+  .calc-container {
+    position: relative;
+    flex-direction: column-reverse;
+    margin-top: .5rem;
+  }
+  .line-deco {
+    position: relative;
+    bottom: 2rem;
+    border-top: none;
+    border-bottom: 0.15rem solid hsl(0, 0%, 86%);
+  }
+  .calculate-action {
+    position: relative;
+    align-self: center;
+  }
+  .output-element {
+    font-size: 4rem;
+  }
+  input {
+    font-size: 18px;
+  }
+  .calculate-action {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .project-card {
+    width: 80vw;
+    border-bottom-right-radius: 8rem;
+  }
+  .input-text {
+    font-size: 0.5rem;
+  }
+  .error-date {
+    font-size: .5rem;
+    max-width: 80%;
+  }
+  .output-container {
+    gap: 1rem;
+  }
+  .output-element {
+    font-size: 3rem;
+  }
+  input {
+    font-size: 10px;
+  }
+  .calculate-action {
+    width: 3rem;
+    height: 3rem;
+  }
 }
