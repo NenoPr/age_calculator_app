@@ -4,7 +4,10 @@ jQuery(document).ready(function ($) {
     calculate()
   });
   $("input").on("keypress", function (e) {
-    if (e.key === "Enter") calculate()
+    if (e.key === "Enter" || e.key === "13") {
+      document.activeElement.blur()
+      calculate()
+    }
   });
   function calculate() {
     if ($(".calc-action-svg").hasClass("arrow-svg")) {
